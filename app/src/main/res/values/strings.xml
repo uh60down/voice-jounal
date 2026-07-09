@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voice Journal</string>
+
+    <string name="empty_state_title">Nothing here yet</string>
+    <string name="empty_state_body">Tap the mic and just talk.\nYou can name it later — or never.</string>
+
+    <string name="record_start">Record a voice note</string>
+    <string name="record_stop_save">Stop and save</string>
+    <string name="recording_banner">Recording… %1$s</string>
+
+    <string name="play_record">Play</string>
+    <string name="stop_playback">Stop playback</string>
+    <string name="edit_metadata">Edit title and description</string>
+
+    <string name="selection_count">%1$d selected</string>
+    <string name="exit_selection">Exit selection</string>
+    <string name="delete_selected">Delete selected</string>
+    <string name="delete_confirm_title">Delete voice records?</string>
+    <plurals name="delete_confirm_body">
+        <item quantity="one">This will permanently delete %1$d voice record and its audio.</item>
+        <item quantity="other">This will permanently delete %1$d voice records and their audio.</item>
+    </plurals>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="edit_dialog_title">Edit details</string>
+    <string name="field_title">Title</string>
+    <string name="field_description">Description</string>
+    <string name="save">Save</string>
+
+    <string name="permission_denied">Microphone permission is needed to record.</string>
+</resources>
