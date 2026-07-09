@@ -10,6 +10,8 @@ implementation express that understanding.
   states, rules R1–R9). This is the source of truth.
 - **[docs/IMPLEMENTATION-MAPPING.md](docs/IMPLEMENTATION-MAPPING.md)** — how every
   implementation decision traces back to that document.
+- **[docs/LEARNING-LOG.md](docs/LEARNING-LOG.md)** — findings flowing back from
+  implementation into the ontology (F1 in progress, F2–F5 backlog).
 
 ## What the MVP does
 

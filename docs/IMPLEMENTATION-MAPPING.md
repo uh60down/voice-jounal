@@ -161,23 +161,25 @@ One screen (`JournalScreen`), because the MVP has one place: the journal.
 
 ## 9. Decisions, questions, and risks
 
-Decisions taken where the ODPM document leaves room (each is a candidate to revisit
-with the ontology's author):
+Decisions taken where the ODPM document leaves room. Decisions 1–5 have been
+promoted to ontology findings in the [Learning Log](LEARNING-LOG.md)
+(F1 in progress, F2–F5 backlog):
 
-1. **Playback is carried alongside the application mode, not as an exclusive mode.**
+1. **Playback is carried alongside the application mode, not as an exclusive mode**
+   (→ [F1](LEARNING-LOG.md), WIP).
    Listening shouldn't lock the journal — the user can browse or enter Selection Mode
    while audio plays. "The application is in the Playback state" ⇔ `playback` is
-   `Playing`. If strict exclusivity was intended, `JournalMode.Playback` is a small change.
-2. **Paused is not modeled** (see §4): the ontology lists the state but no Pause action
-   exists in Behaviors, and MVP scope says play/stop only.
-3. **Stop Recording always saves.** The ontology has no "discard recording" behavior,
-   and capture-first implies a captured thought is worth keeping. (A capture too short
-   to contain audio is discarded by the recorder with an error, since R4 makes a
-   record without audio unrepresentable.)
-4. **Starting a recording stops playback** — the microphone wins over the speaker so a
-   new thought is never captured over another one playing aloud.
-5. **Deleting a playing record stops playback first** — a deleted record has no states
-   left, including Playing.
+   `Playing`.
+2. **Paused is not modeled** (→ [F2](LEARNING-LOG.md), see §4): the ontology lists the
+   state but no Pause action exists in Behaviors, and MVP scope says play/stop only.
+3. **Stop Recording always saves** (→ [F3](LEARNING-LOG.md)). The ontology has no
+   "discard recording" behavior, and capture-first implies a captured thought is worth
+   keeping. (A capture too short to contain audio is discarded by the recorder with an
+   error, since R4 makes a record without audio unrepresentable.)
+4. **Starting a recording stops playback** (→ [F4](LEARNING-LOG.md)) — the microphone
+   wins over the speaker so a new thought is never captured over another one playing aloud.
+5. **Deleting a playing record stops playback first** (→ [F5](LEARNING-LOG.md)) — a
+   deleted record has no states left, including Playing.
 6. **Duration is measured as wall-clock session time**, not decoded from the media file.
    Simple and permission-free; could drift a few hundred ms from the true audio length.
 7. **Deletion is reached through Selection Mode only** (long-press → select → delete),
